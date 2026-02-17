@@ -1,0 +1,252 @@
+/* Formulaire classe*/
+.form-plugin-reservation {
+    max-width: 400px;
+    margin: 20px auto;
+    padding: 10px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    background-color: #f9f9f9;
+}
+
+.form-plugin-reservation label {
+    font-weight: bold;
+    margin-top: 10px;
+    display: block;
+}
+
+.form-plugin-reservation input, .form-plugin-reservation textarea, .form-plugin-reservation button {
+    width: 90%;
+    padding: 8px;
+    margin-top: 5px;
+    margin-bottom: 10px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+}
+
+.form-plugin-reservation button {
+    background-color: #0073aa;
+    color: white;
+    font-weight: bold;
+    border: none;
+    cursor: pointer;
+}
+
+.form-plugin-reservation button:hover {
+    background-color: #005177;
+}
+
+.note {
+    font-size: 0.9em;
+    color: #666;
+    margin-top: 5px;
+}
+
+/* Champs non modifiables */
+.form-plugin-reservation input[readonly], .form-plugin-reservation textarea[readonly] {
+    background-color: #f0f0f0;
+    border: 1px solid #dcdcdc;
+    color: #888888;
+    pointer-events: none;
+}
+
+
+/* Bouton Déconnexion */
+.logout-link {
+    color: #d9534f;
+    text-decoration: underline;
+    font-size: 16px;
+    cursor: pointer;
+}
+.logout-link:hover {
+    color: #c9302c;
+}
+
+
+
+/* Messages */
+.message-error {
+    color: red;
+    font-weight: bold;
+    margin-top: 10px;
+}
+
+.message-success {
+    color: green;
+    font-weight: bold;
+    margin-top: 10px;
+}
+
+.message-warning {
+    color: #f0cd4e;
+    font-weight: bold;
+    margin-top: 10px;
+}
+
+.message-error, .message-success, .message-warning {
+    transition: opacity 1s ease-out;
+    opacity: 1;
+}
+
+.message-error.hidden, .message-success.hidden, .message-warning.hidden {
+    opacity: 0;
+}
+
+
+/*--- Style pour la page de réservation ---*/
+.reservation-container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.reservation-contenu {
+    display: flex;
+    justify-content: center;
+    gap: 30px;
+    width: 100%;
+}
+
+.calendrier-reservation {
+    flex: 1;
+    min-width: 100%;
+    box-sizing: border-box;
+}
+
+.formulaire-reservation {
+    flex: 2;
+    min-width: 70%;
+    box-sizing: border-box;
+}
+
+@media screen and (max-width: 1160px) {
+    .reservation-contenu {
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .calendrier-reservation,
+    .formulaire-reservation {
+        min-width: 100%;
+    }
+}
+
+.vehicule-indisponible {
+    text-align: center;
+    background-color: #ffcccc;
+    color: #d10000;
+    font-size: 18px;
+    font-weight: bold;
+    padding: 10px;
+    border-radius: 5px;
+    margin-top: 20px;
+}
+
+/* Légendes */
+.legende-calendrier {
+    margin-top: 20px;
+    font-size: 14px;
+    display: flex;
+    gap: 20px;
+    flex-wrap: wrap;
+}
+
+.legende-item {
+    display: flex;
+    align-items: center;
+}
+
+.block {
+    width: 20px;
+    height: 20px;
+    margin-right: 10px;
+}
+
+.couleur-verte {
+    background-color: green;
+}
+
+.couleur-rouge {
+    background-color: rgb(164, 0, 0);
+}
+
+.couleur-orange {
+    background-color: orange;
+}
+
+.couleur-violette {
+    background-color: purple;
+}
+
+.texte-legende {
+    font-weight: bold;
+}
+
+
+/* Tableau des réservations */
+.tableau-reservations {
+    margin-top: 20px;
+}
+
+@media screen and (max-width: 768px) {
+    .tableau-reservations th, .tableau-reservations td {
+        font-size: 12px !important;
+    }
+
+    .annuler-btn {
+        padding: 5px 10px !important;
+        font-size: 12px !important;
+    }
+}
+
+.tableau-reservations table {
+    width: 100%;
+    border-collapse: collapse;
+    background-color: white;
+}
+
+.tableau-reservations thead {
+    background-color: #333;
+}
+
+.tableau-reservations th
+{
+    color: white !important;
+}
+
+.tableau-reservations th, .tableau-reservations td {
+    padding: 10px;
+    text-align: center;
+    border: 1px solid #ddd;
+}
+
+.tableau-reservations tbody {
+    display: block;
+    max-height: 400px;
+    overflow-y: auto;
+}
+
+.tableau-reservations thead, 
+.tableau-reservations tbody tr {
+    display: table;
+    width: 100%;
+    table-layout: fixed;
+}
+
+.formulaire-annulation {
+    border: none;
+    background-color: white;
+    padding: 10px;
+}
+
+.annuler-btn {
+    background-color: #ff4d4d;
+    color: white;
+    border: none;
+    padding: 10px 20px;
+    cursor: pointer;
+    border-radius: 5px;
+}
+
+.annuler-btn:hover {
+    background-color: #cc0000;
+}
